@@ -9,6 +9,9 @@
 import Foundation
 
 public class IsoCountryCodes {
+    public class var allCountries: [IsoCountryInfo] {
+        return IsoCountries.allCountries
+    }
 
     public class func find(key: String) -> IsoCountryInfo? {
         let countries = IsoCountries.allCountries.filter({ $0.alpha2 == key.uppercased() ||
